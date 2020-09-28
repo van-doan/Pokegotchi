@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Game Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Gochi+Hand&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script defer src="./js/main.js"></script>
+    <title>Pokégotchi</title>
+</head>
+<body>
+
+    <!-- Preloading Screen -->
+    <div id="preload">
+        <img class= "apoca-bg" src="./images/apoca_bg_edited.png">
+        <img class= "apoca-cloud1" src="./images/cloud1.png">
+        <img class= "apoca-cloud2" src="./images/cloud2.png">
+        <img class= "apoca-cloud3" src="./images/cloud3.png">
+        <p id="intro-text1"></p>
+        <p id="intro-text2"></p>
+        <p id="intro-text3"></p>
+    </div>
+    <!-- Landing Page -->
+    <div id="landingpage">
+        <div class="start-screen">
+            <img class="pokegotchi-header" src="./images/pokegotchi_header_img.png">
+            <h2 class="apocalypse-version">Apocalypse Version</h2>
+            <img class="pokegotchi-mc" src="./images/tamagotchi-character.png">
+            <h3 class="start-game-message">Press the Space Bar to begin</h3>
+            <footer class="project-rights">©2020 VAN_DOAN</footer>
+        </div>
+    </div>
+
+    <!-- Initiating the game -->
+<div id="game-initiation">
+    <div class="init-container">
+        <p id="game-init-msg1" class="game-init-msg"></p>
+        <input type="text" id="input1">
+        <button id="btnInput1" class="hoverboys" type="button">Enter</button>
+        <p id="game-init-msg2" class="game-init-msg"></p>
+            <button id="btnInput2" type="button"><img class="embeak-standard" src="./images/embeak-standard.png"></button>
+            <button id="btnInput3" type="button"><img class="droop-standard" src="./images/droop-standard.png"></button>
+            <button id="btnInput4" type="button"><img class="geopup-standard" src="./images/geopup-standard.png"></button>
+        <p id="game-init-msg3" class="game-init-msg"></p>
+        <input type="text" id="input2">
+        <button id="btnInput5" class="hoverboys" type="button">Enter</button>
+        <p id="game-init-msg4" class="game-init-msg"></p>
+        <img class="init-dialogue" src="./images/dialogue-box-new.png">
+    </div>
+</div>
+
+    <!-- Game Commenced -->
+<div id="game">
+    <div id="lifeButtons">
+        <button type="button" id="healthBtn" class="lifeBtns"><img class="lifeImg" src="./images/healthBtn.png"></button>
+        <button type="button" id="energyBtn" class="lifeBtns"><img class="lifeImg" src="./images/energyBtn.png"></button>
+        <button type="button" id="foodBtn" class="lifeBtns"><img class="lifeImg" src="./images/foodbtn.png"></button>
+    </div>
+    <div id="movementButtons">
+        <button type="button" id="leftBtn" class="arrowBtns"><img class="arrowkey" src="./images/left-arrow-key.png"></button>
+        <button type="button" id="rightBtn" class="arrowBtns"><img class="arrowkey" src="./images/right-arrow-key.png"></button>
+    </div>
+    <div id="game-rules-container">
+        <button id="game-rules-btn">Game Rules</button>
+        <p id="rules-text">Keep your pet alive! Press A to increase happiness, S for energy, and D for hunger. 
+            If your pet reaches zero for any critical component, your pet will die. Use the left and right arrow keys to move your sprite and collect rare candies to level up!</p>
+    </div>
+
+    <div class="gamingConsole">
+    <div class="black-screen">    
+    <div id="innerGamingConsole" class="innerGamingConsole">
+        <div id="game-screen" class="game-screen"><button type="button" id="startBtn" class="start-btn">START</button>
+        <img class="gamingBg" src="./images/industrial_game_bg-1.png">
+        </div>
+            <div class="spans">
+            <span class="gaming">GAMING</span>
+            <span class="r" class="console">C</span>
+            <span class="o" class="console">O</span>
+            <span class="y" class="console">N</span>
+            <span class="g" class="console">S</span>
+            <span class="b" class="console">O</span>
+            <span class="i" class="console">L</span>
+            <span class="v" class="console">E</span>
+            </div>
+        </div>
+    </div>
+        <div id ="criticalComponents" class="criticalComponents">
+            <div id="happiness-components" class="critComponents"></div>
+            <div id="energy-components" class="critComponents"></div>
+            <div id="food-components" class="critComponents"></div>
+            <div id="level-container"></div>
+        </div>
+    </div>
+</div>
+
+    <div id="result-page">
+        <h1 class="result"> YOUR PET DIED...</h1>
+        <h2 class="result-header"> THANK YOU FOR PLAYING!</h2>
+        <button id="refresh-page" class="refresh-btn">PLAY AGAIN?</button>
+    </div>
+</body>
+</html>
