@@ -227,3 +227,203 @@ async function showChooseSpriteOption () {
         });
     } 
 }
+
+//**************************//
+//   Main Game Functions    //
+//**************************//
+
+function appendChosenSpriteInGame () {
+    let gameContainer = document.getElementById("game-screen");
+    let chosenSpriteClass = player.sprite.classification;
+    let chosenSprite = document.createElement('img');
+    chosenSprite.id = "movingSprite";
+        startGameBtn.addEventListener('click', async () =>  {
+            if (chosenSpriteClass === 'Embeak') {
+                chosenSprite.src = './images/embeak-standard.png';
+                chosenSprite.classList.add('embeak');
+                gameContainer.append(chosenSprite);
+        }
+            if (chosenSpriteClass === 'Droop') {
+                chosenSprite.src = './images/droop-standard.png';
+                chosenSprite.classList.add('droop');
+                gameContainer.append(chosenSprite);
+        }
+            if (chosenSpriteClass === 'Geopup') {
+                chosenSprite.src = './images/geopup-standard.png';
+                chosenSprite.classList.add('geopup');
+                gameContainer.append(chosenSprite);
+        }
+        $(document).keydown(function(e){
+            var position = $("#movingSprite").position();
+            switch (e.key){
+                case 'ArrowLeft': //left
+                if (constrainSpriteMovement(position.left - 20) === true) {
+                    $("#movingSprite").css('left', position.left - 20 + 'px');
+                    checkCandyOverlap(position.left - 20);
+                    }   
+                    break;
+                case 'ArrowRight': //right
+                if (constrainSpriteMovement(position.left + 20) === true) {
+                    $("#movingSprite").css('left', position.left + 20 + 'px');
+                    checkCandyOverlap(position.left + 20);
+                    }
+                    break;
+                case 'a': //key A
+                if (player.sprite.happiness < 10) {
+                    player.sprite.happiness += 1;
+                    renderCriticalComponents();
+                }
+                    break;
+                case 's': //key S
+                if (player.sprite.energy < 10) {
+                    player.sprite.energy += 1;
+                    renderCriticalComponents();
+                }   
+                    break;
+                case 'd': //key D
+                    if (player.sprite.hunger < 10) {
+                    player.sprite.hunger += 1;
+                    renderCriticalComponents();
+                    }      
+                    break;           
+            }
+        });
+        removeStartButton();
+        renderCriticalComponents();
+        timerSetup();
+        setInterval(generateRareCandy, 5000);
+    });
+}
+
+// Constraining sprite movement so it doesn't move further than div width
+function constrainSpriteMovement (spritePosition) {
+    let screenDiv = document.getElementById("game-screen");
+    let elementWidth = screenDiv.offsetWidth - 60;
+    let min = 0;
+    let max = elementWidth;
+        if (spritePosition >= min && spritePosition <= max) {
+            return true;
+        } else {
+            return false;
+        }
+}
+ 
+
+//Rendering the Amount of Critical Components based on Sprite Class Stats
+function renderCriticalComponents () {
+    let parent = document.getElementById("level-container");
+        renderCriticalComponent (player.sprite.happiness, "happiness-components", './images/project0-heart.png');
+        renderCriticalComponent (player.sprite.energy, "energy-components", './images/electric-bolt.png');
+        renderCriticalComponent (player.sprite.hunger, "food-components", './images/drum-stick.png');
+        let spriteLevel = document.createElement('div').innerHTML = player.sprite.level;
+        spriteLevel.id = "level";
+        if (parent.hasChildNodes()) {
+            parent.removeChild(parent.lastChild);
+        };
+            parent.append(spriteLevel);
+}
+//A dryer version instead of listing every single class with its respective sources
+function renderCriticalComponent (num, elementId, src) {
+    let parent = document.getElementById(elementId);
+    while (parent.hasChildNodes()) {
+        parent.removeChild(parent.lastChild);
+    };
+    for (let i = 0; i < num; i++) {
+        let element = document.createElement('img');
+        element.src = src;
+        parent.append(element);
+    }
+}
+
+// // In-game Timer
+let time = 0
+let points = 0;
+const timerSetup = () => {
+    const timer = setInterval(() => {
+    if (player.sprite.energy === 0 || player.sprite.hunger === 0 || player.sprite.happiness === 0 || player.sprite.energy === 0) {
+        fadeOut("game");
+    } else {
+        player.sprite.energy -= 1;
+        player.sprite.hunger -= 1;
+        player.sprite.happiness -= 1;
+    }
+        renderCriticalComponents();
+        changingSpriteExpression(player.sprite.classification);
+    }, 2000)
+};
+
+// Change Sprite Expression based on sprite stat (num); we'll need to know their id; we'll need to include in ability to pass the correct source
+function changingSpriteExpression (spriteclass) {
+    let spriteElement = document.getElementById("movingSprite");
+    if (player.sprite.isDead()) {
+        let src = "./images/" + spriteclass.toLowerCase() + "-dead.png";
+        spriteElement.src = src;
+    }
+    if (player.sprite.isStandard()) {
+        let src = "./images/" + spriteclass.toLowerCase() + "-standard.png";
+        spriteElement.src = src;
+    }
+    if (player.sprite.isHappy()) {
+        let src = "./images/" + spriteclass.toLowerCase() + "-happy.png";
+        spriteElement.src = src;
+    }
+    if (player.sprite.isReadyToEvolveToFirstEvolution()) {
+        let src = "./images/" + spriteclass.toLowerCase() + "-evolution1.png";
+        spriteElement.src = src;
+        spriteElement.style.bottom = 50 + "px";
+    }
+    if (player.sprite.firstEvolutionIsDead()) {
+        let src = "./images/" + spriteclass.toLowerCase() + "-evolution1-dead.png";
+        spriteElement.src = src;
+        spriteElement.style.bottom = 50 + "px";
+    }
+    if (player.sprite.firstEvolutionIsHappy()) {
+        let src = "./images/" + spriteclass.toLowerCase() + "-evolution1-happy.png";
+        spriteElement.src = src;
+        spriteElement.style.bottom = 50 + "px";
+    }
+    if (player.sprite.isReadyToEvolveToSecondEvolution()) {
+        let src = "./images/" + spriteclass.toLowerCase() + "-evolution2.png";
+        spriteElement.src = src;
+        spriteElement.style.bottom = 50 + "px";
+    }
+};
+
+// Rare Candy Pick-up Functionality
+// The idea is to drop candies in random places along the game screen div
+const candyPositions = {}
+function generateRareCandy () {
+    let gameScreen = document.getElementById("game-screen");
+    let gameScreenWidth = gameScreen.offsetWidth - 60;
+    // Establishing the range 
+    let randomPosition = Math.floor(Math.random () * gameScreenWidth) + 1;
+
+    let rareCandy = document.createElement('img');
+        rareCandy.src = "./images/rare-candy.png";
+        rareCandy.classList.add("rareCandy");
+        rareCandy.style.left = randomPosition + "px";
+        gameScreen.append(rareCandy);
+            // this will allow us to know where the candy positions are
+        candyPositions[randomPosition] = rareCandy;
+    }
+
+function checkCandyOverlap (position) {
+    // from the center of our sprite, we want to check 50 from its left & right.
+    let selectedSprite = document.getElementById("movingSprite");
+    let spriteWidth = selectedSprite.clientWidth
+    let min = position - (spriteWidth/2)
+    let max = position + (spriteWidth/2)
+
+        //iterating over all of the candyPositions to check if they've touched our sprite
+        // everytime we move the sprite, we want to see if they're within our min and max
+        // if they are, we'll delete them.
+        for (let key in candyPositions) {
+            if (key > min && key < max) {
+                //Removing the rare candy from DOM
+                candyPositions[key].remove();
+                // Deletes it from our object so it doesn't keep checking for the candyPostion[key]
+                delete candyPositions[key];
+                player.sprite.level++;
+            }
+        }
+}
