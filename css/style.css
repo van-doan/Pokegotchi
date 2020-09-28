@@ -245,3 +245,219 @@ font-family: 'Press Start 2P', cursive;
 #btnInput4 {
     left: 60%;
 }
+
+/*===========================*/
+/*    Game Console Styles    */
+/*===========================*/
+#game {
+    top: 0;
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease;
+    position: fixed;
+    z-index: -2;
+}
+
+.gamingConsole {
+    background: linear-gradient(0deg, #464646, #501fc1);
+    width: 700px;
+    height: 560px;
+    position: fixed;
+    border-radius: 20px;
+    bottom: -5%;
+    border-style: ridge;
+    border-color: #40007F;
+    display: flex;
+    justify-content: center;
+
+}
+
+.black-screen {
+    position: fixed;
+    width: 570px;
+    bottom: 10%;
+    background-color: #000;
+    border-radius: 20px;
+    display: flex;
+}
+
+.innerGamingConsole {
+    position: fixed;
+    width: inherit;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 15px;
+    border-radius: 30px;
+    bottom: 12%;
+    text-align: center;
+}
+
+#game-rules-container {
+    position: absolute;
+    top: 5%;
+    font-size: 10px;
+    text-align: center;
+    width: 500px;
+}
+
+#game-rules-btn {
+    font-family: 'Press Start 2P', cursive;
+    padding: 3px 3px;
+    visibility: hidden;
+    opacity: .5;
+    margin: 10px;
+    background: transparent;
+    color: white;
+}
+
+#rules-text {
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.start-btn {
+    font-family: 'Press Start 2P', cursive;
+    padding: 3px 3px;
+    position: absolute;
+    left: 45%;
+    top: 50%;
+    animation: pulsate 2s ease-out;
+    animation-iteration-count: infinite;
+}
+
+.start-btn:hover {
+    background-color: red;
+    color: white;
+    padding: 4px 4px;
+    animation: none;
+}
+
+.criticalComponents {
+    position:absolute;
+    top: 100px;
+    left: 100px;
+}
+
+.happiness-components {
+    top: 0px;
+    position:absolute;
+}
+
+.energy-components {
+    top: 35px;
+    position:absolute;
+}
+
+.food-components {
+    top: 70px;
+    position:absolute;
+}
+
+#level-container {
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    position:absolute;
+}
+
+#game-screen {
+    display: flex;
+    justify-content: center;
+    padding: 30px 30px 0 30px;
+}
+
+.gamingBg {
+    width: 100%;
+}
+
+.spans {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.gaming {
+    font-family: 'Alata', sans-serif;
+    color: #fff;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.r, .o, .y, .g, .b, .i, .v {
+    font-family: 'Gochi Hand', cursive;
+}
+
+.r {color: #ff3823; margin-left: 8px; font-size: 20px; letter-spacing: -4px;}
+.o {color: #ff8351; font-size: 20px; letter-spacing: -4px;}
+.y {color: #fef67f; font-size: 20px; letter-spacing: -4px;}
+.g {color: #72bb53; font-size: 20px; letter-spacing: -4px;}
+.b {color: #3d8af7; font-size: 20px; letter-spacing: -4px;}
+.i {color: #0844a4; font-size: 20px; letter-spacing: -4px;}
+.v {color: #6334e3; font-size: 20px; letter-spacing: -4px;}
+
+#lifeButtons, #movementButtons {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    bottom: 0;
+    width: 300px;
+    height: 300px;
+}
+
+#lifeButtons {
+    left: 5%;
+}
+
+#movementButtons {
+    right: 5%;
+}
+
+.lifeBtns {
+    border-radius: 50%;
+    margin: 10px 10px;
+}
+
+.arrowBtns, .lifeBtns {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.lifeImg {
+    width: 110px;
+}
+
+.arrowkey {
+    width: 130px;
+}
+
+#game-screen {
+    display: flex;
+    justify-content: center;
+}
+
+.embeak {
+    position: absolute;
+    bottom: 30px;
+    width: 100px;
+}
+
+.droop {
+    position: absolute;
+    bottom: 30px;
+    width: 100px;
+}
+
+.geopup {
+    position: absolute;
+    bottom: 50px;
+    width: 100px;
+}
+
+.rareCandy {
+    position: absolute;
+    width: 5%;
+    bottom: 60px;
+}
