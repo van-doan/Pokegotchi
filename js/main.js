@@ -427,3 +427,6 @@ function checkCandyOverlap (position) {
             }
         }
 }
+
+// Rendering introduction dialogue
+renderIntroTexts();
