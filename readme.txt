@@ -80,3 +80,6 @@ In-game Functionality
 
 4. The game will last as long as the pet lives and the experience level is infinite. If the pet dies, the game is over and will be directed to a "result page" where the user is notified that they've lost and can choose to play again.
 
+Future Developments for unsolved problems
+1. Include sound for preload page, landing page, tone after each button in dialogue sequence is pressed, tones when Pokemon eats a rare candy (level up sound), and add game music
+2. Implement functionality to make the background to seem like it extends further than the constrained div width
