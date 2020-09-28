@@ -1,0 +1,14 @@
+/*===========================*/
+/*       Global Styles       */
+/*===========================*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+ }
+ 
+ .fadeOut {
+     opacity: 0;
+     pointer-events: none;
+ }
