@@ -461,3 +461,45 @@ font-family: 'Press Start 2P', cursive;
     width: 5%;
     bottom: 60px;
 }
+
+/*===========================*/
+/*         Result Page       */
+/*===========================*/
+#result-page {
+    display: inline-block;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background: radial-gradient(circle, #aaaaaa, #777777, #52575d);
+    z-index: -3;
+    text-align: center;
+}
+
+.result {
+    font-family: 'Press Start 2P', cursive;
+    color: red;
+    margin-top: 10rem;
+    font-size: 5rem;
+}
+
+.result-header {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2rem;
+    margin: 7rem 0 5rem;
+    color: white;
+}
+
+.refresh-btn {
+    font-family: 'Press Start 2P', cursive;
+    padding: 10px 10px;
+    animation: pulsate 2s ease-out;
+    animation-iteration-count: infinite;
+    animation: pulsate 2s ease-out;
+    animation-iteration-count: infinite;
+}
+
+.refresh-btn:hover {
+    background-color: #66CD00;
+    color: white;
+    animation: none;
+}
