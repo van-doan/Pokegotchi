@@ -503,3 +503,29 @@ font-family: 'Press Start 2P', cursive;
     color: white;
     animation: none;
 }
+
+/*===========================*/
+/*          Keyframes        */
+/*===========================*/
+@keyframes clouds {
+    from {
+        right: 0%;
+    }
+    to {
+        right: 130%;
+    }
+}
+
+
+@keyframes pulsate {
+    /* This effect will apply to start game message */
+    0% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.3;
+    }
+}
