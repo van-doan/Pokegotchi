@@ -83,3 +83,5 @@ In-game Functionality
 Future Developments for unsolved problems
 1. Include sound for preload page, landing page, tone after each button in dialogue sequence is pressed, tones when Pokemon eats a rare candy (level up sound), and add game music
 2. Implement functionality to make the background to seem like it extends further than the constrained div width
+3. The current app is not responsive - for future developments, I’d like to add DOM breakpoints so any viewport size can access the game.
+4. I had trouble adding animations for added img srcs therefore would like to spend more time in the future implementing this.
