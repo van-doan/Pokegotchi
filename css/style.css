@@ -140,3 +140,108 @@ font-family: 'Press Start 2P', cursive;
 .project-rights {
     font-size: .8rem;
 }
+
+/*===========================*/
+/*      Game Init Styles     */
+/*===========================*/
+#game-initiation {
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease;
+    position: fixed;
+    z-index: -1;
+}
+
+.init-container {
+    width: 940px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.init-dialogue {
+    position: absolute;
+    bottom: 5%;
+    height: 150px;
+    width: 900px;
+}
+
+.game-init-msg {
+    font-family: 'Press Start 2P', cursive;
+    color: black;
+    display: flex;
+    position: absolute; 
+    width: inherit;
+    padding: 0px 50px;
+    text-align: center;
+    line-height: 2;
+}  
+
+#game-init-msg1, 
+#game-init-msg3 {
+    bottom: 10%;
+}
+
+#game-init-msg2 {
+    bottom: 8%;
+}
+
+#game-init-msg4 {
+    bottom: 7%;
+}
+
+#input1, #input2, #input3 {
+    visibility: hidden;
+    position: absolute;
+    width: 300px;
+    height: 30px;
+    text-align: center;
+    top: 20%;
+    font-family: 'Press Start 2P', cursive;
+}
+
+#btnInput1, #btnInput5 {
+    visibility: hidden;
+    position: absolute;
+    padding: 6.5px 8px;
+    top: 28%;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.hoverboys:hover {
+    background-color: #BF1736;
+    color: #fff;
+}
+
+
+#btnInput2, #btnInput3, #btnInput4 {
+    visibility: hidden;
+    position: absolute;
+    border-width: 0;
+    border-color: transparent;
+    background-color: transparent;
+    width: 200px;
+    height: 200px;
+    top: 35%;
+}
+
+.droop-standard {
+    width: inherit;
+}
+
+#btnInput2 {
+    left: 30%;
+}
+
+#btnInput3 {
+    left: 45%;
+}
+
+#btnInput4 {
+    left: 60%;
+}
