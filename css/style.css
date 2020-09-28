@@ -318,6 +318,7 @@ font-family: 'Press Start 2P', cursive;
 #rules-text {
     color: white;
     font-family: 'Press Start 2P', cursive;
+    line-height: 14px;
 }
 
 .start-btn {

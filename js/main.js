@@ -428,5 +428,13 @@ function checkCandyOverlap (position) {
         }
 }
 
+// Results Page - Refresh Button Function
+$(document).ready(function() {
+    $('#refresh-page').on('click', () => {
+        window.location.reload(true); 
+    });
+});
+
+
 // Rendering introduction dialogue
 renderIntroTexts();
