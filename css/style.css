@@ -265,7 +265,7 @@ font-family: 'Press Start 2P', cursive;
 .gamingConsole {
     background: linear-gradient(0deg, #464646, #501fc1);
     width: 700px;
-    height: 560px;
+    height: 600px;
     position: fixed;
     border-radius: 20px;
     bottom: -5%;
