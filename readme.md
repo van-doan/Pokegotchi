@@ -1,7 +1,7 @@
-## What is Pokégotchi?
+## Pokégotchi?
 **Pokégotchi** is a spin-off concept of Pokémon and Tamagotchi. Play the game [here.](http://pokegotchi-app.herokuapp.com)
 
-## What's the User Journey like?
+## User Journey
 ### Game Introduction
 The game will start with the landing page which will consist of a short typewritten message to establish the theme of the game.
 After the message is finished being typed on screen, the landing page section will reveal a start game screen where the user can press the space button to start the game.
@@ -39,7 +39,7 @@ Experience level will be incorporated.
 "Rare candies" will appear in random positions every 5 seconds once the game starts.
  If rare candy is consumed (touched) by the sprite, they level up.
 
-## Wireframe of Project
+## Wireframe
 https://imgur.com/a/9K7o9Y4
 
 ## Future Developments for unsolved problems
