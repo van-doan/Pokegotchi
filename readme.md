@@ -1,16 +1,5 @@
 ## What is Pokégotchi?
-**Pokégotchi** is a spin-off concept of Pokémon and Tamagotchi.
-
-Pokémon is a game inspired around fictional creatures that are captured and trained to battle for sport. Each Pokémon are unique in terms of their elemental type, nature, and abilities. The mechanics of the game are to capture all Pokémon in the game and train them to reach their peak evolutions to be the best trainer in the Pokémon world. However, in Pokémon games, they are essentially immortal no matter how many times they are defeated or "faint".
-
-Tamagotchi is a toy/game incorporating digital pets simulating a real pet users have to take care of. When the toy is activated, the user waits for the egg to hatch their pet. Similar to Pokémon, each pet has stages of evolution from being a baby, child, teenager and adult. However, in Tamagotchi, poor care can lead to the pet's death. If you're a good person, you don't want this to happen...
-
-Taking the concept of Pokémon's unique qualities and aesthetics, we combine the concepts with the functionality/mechanics of Tamagotchi. Instead of the egg hatching sequence that typically happens with Tamagotchi toys, this game will incorporate Pokémon's concept of choosing one of 3 sprites.
-
-Pokémon generally carries a theme for each version (culture/religion/hope/genetics/dinosaurs). The theme for this game will be "post-apocalyptic". The goal of the game is to keep your Pokégotchi alive since they're really all you have...
-
-What's your inspiration for the interface?
-For this project, we are incorporating Pokémon's earlier versions of their load screen as the landing page. For the in-game interface, the GameBoy Color's structural design will serve as the main user interface. All art besides the background images on the landing page and the in-game interface is original and created by me.
+**Pokégotchi** is a spin-off concept of Pokémon and Tamagotchi. Play the game [here.](http://pokegotchi-app.herokuapp.com)
 
 ## What's the User Journey like?
 ### Game Introduction
