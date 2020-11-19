@@ -12,521 +12,526 @@
      opacity: 0;
      pointer-events: none;
  }
-
-/*===========================*/
-/*      Fonts To Be Used     */
-/*===========================*/
-/* font-family: 'Alata', sans-serif;
-font-family: 'Gochi Hand', cursive;
-font-family: 'Press Start 2P', cursive;
-
-/*===========================*/
-/*       Preload Styles      */
-/*===========================*/
-
-#preload {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 100vh;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: opacity 0.5s ease;
-    z-index: 2;
-}
-
-.apoca-bg {
-    width: 100%;
-    height: 100%;
-}
-
-.apoca-cloud1, .apoca-cloud2, .apoca-cloud3 {
-    position: absolute;
-    right: 0%;
-    height: 80px;
-    width: 300px;
-    opacity: .3;
-}
-
-.apoca-cloud1 {
-    top: 15%;
-    transform: translate(100%, -15%);
-    animation: clouds 3s cubic-bezier(.7,1,1,1) infinite;
-}
-.apoca-cloud2 {
-    top: 20%;
-    transform: translate(100%, -20%);
-    animation: clouds 3s cubic-bezier(1,1,1,1) infinite 3s;
-}
-.apoca-cloud3 {
-    top: 10%;
-    transform: translate(100%, -10%);
-    animation: clouds 3s cubic-bezier(.9,1,1,1) infinite 1.5s;
-}
-
-#intro-text1, #intro-text2, #intro-text3 {
-    font-family: 'Press Start 2P', cursive;
-    color: black;
-    display: flex;
-    position: absolute;
-}
-
-#intro-text1 {
-    top: 12%;
-    left: 6%;
-}
-
-#intro-text2 {
-    top: 18%;
-    left: 32%;
-}
-
-#intro-text3 {
-    top: 28%;
-    left: 65%;
-}
-
-/*===========================*/
-/*    Landing Page Styles    */
-/*===========================*/
-#landingpage {
-    top: 0;
-    width: 100%;
-    height: 100vh;
-    background: radial-gradient(circle, #aaaaaa, #777777, #52575d);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: opacity 0.5s ease;
-    position: fixed;
-    z-index: 0;
-}
-
-.start-screen {
-    width: 50%;
-    text-align: center;
-}
-
-.pokegotchi-header {
-    width: 100%;
-}
-
-.pokegotchi-mc {
-    width: 10%;
-    margin: 40px 0 20px;
-}
-
-.apocalypse-version, .start-game-message, .project-rights {
-    text-align: center;
-    font-family: 'Press Start 2P', cursive
-}
-
-.apocalypse-version {
-    margin-top: 40px;
-    font-size: 1.2rem;
-    letter-spacing: 1.6px;
-}
-
-.start-game-message {
-    font-size: 12px;
-    margin-bottom: 20px;
-    color: white;
-    animation: pulsate 2s ease-out;
-    animation-iteration-count: infinite;
-}
-
-.project-rights {
-    font-size: .8rem;
-}
-
-/*===========================*/
-/*      Game Init Styles     */
-/*===========================*/
-#game-initiation {
-    top: 0;
-    width: 100%;
-    height: 100vh;
-    background: whitesmoke;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: opacity 0.5s ease;
-    position: fixed;
-    z-index: -1;
-}
-
-.init-container {
-    width: 940px;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-}
-
-.init-dialogue {
-    position: absolute;
-    bottom: 5%;
-    height: 150px;
-    width: 900px;
-}
-
-.game-init-msg {
-    font-family: 'Press Start 2P', cursive;
-    color: black;
-    display: flex;
-    position: absolute; 
-    width: inherit;
-    padding: 0px 50px;
-    text-align: center;
-    line-height: 2;
-}  
-
-#game-init-msg1, 
-#game-init-msg3 {
-    bottom: 10%;
-}
-
-#game-init-msg2 {
-    bottom: 8%;
-}
-
-#game-init-msg4 {
-    bottom: 7%;
-}
-
-#input1, #input2, #input3 {
-    visibility: hidden;
-    position: absolute;
-    width: 300px;
-    height: 30px;
-    text-align: center;
-    top: 20%;
-    font-family: 'Press Start 2P', cursive;
-}
-
-#btnInput1, #btnInput5 {
-    visibility: hidden;
-    position: absolute;
-    padding: 6.5px 8px;
-    top: 28%;
-    font-family: 'Press Start 2P', cursive;
-}
-
-.hoverboys:hover {
-    background-color: #BF1736;
-    color: #fff;
-}
-
-
-#btnInput2, #btnInput3, #btnInput4 {
-    visibility: hidden;
-    position: absolute;
-    border-width: 0;
-    border-color: transparent;
-    background-color: transparent;
-    width: 200px;
-    height: 200px;
-    top: 35%;
-}
-
-.droop-standard {
-    width: inherit;
-}
-
-#btnInput2 {
-    left: 30%;
-}
-
-#btnInput3 {
-    left: 45%;
-}
-
-#btnInput4 {
-    left: 60%;
-}
-
-/*===========================*/
-/*    Game Console Styles    */
-/*===========================*/
-#game {
-    top: 0;
-    background-color: black;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: opacity 0.5s ease;
-    position: fixed;
-    z-index: -2;
-}
-
-.gamingConsole {
-    background: linear-gradient(0deg, #464646, #501fc1);
-    width: 700px;
-    height: 600px;
-    position: fixed;
-    border-radius: 20px;
-    bottom: -5%;
-    border-style: ridge;
-    border-color: #40007F;
-    display: flex;
-    justify-content: center;
-
-}
-
-.black-screen {
-    position: fixed;
-    width: 570px;
-    bottom: 10%;
-    background-color: #000;
-    border-radius: 20px;
-    display: flex;
-}
-
-.innerGamingConsole {
-    position: fixed;
-    width: inherit;
-    background: black;
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 15px;
-    border-radius: 30px;
-    bottom: 12%;
-    text-align: center;
-}
-
-#game-rules-container {
-    position: absolute;
-    top: 5%;
-    font-size: 10px;
-    text-align: center;
-    width: 500px;
-}
-
-#game-rules-btn {
-    font-family: 'Press Start 2P', cursive;
-    padding: 3px 3px;
-    visibility: hidden;
-    opacity: .5;
-    margin: 10px;
-    background: transparent;
-    color: white;
-}
-
-#rules-text {
-    color: white;
-    font-family: 'Press Start 2P', cursive;
-    line-height: 14px;
-}
-
-.start-btn {
-    font-family: 'Press Start 2P', cursive;
-    padding: 3px 3px;
-    position: absolute;
-    left: 45%;
-    top: 50%;
-    animation: pulsate 2s ease-out;
-    animation-iteration-count: infinite;
-}
-
-.start-btn:hover {
-    background-color: red;
-    color: white;
-    padding: 4px 4px;
-    animation: none;
-}
-
-.criticalComponents {
-    position:absolute;
-    top: 100px;
-    left: 100px;
-}
-
-.happiness-components {
-    top: 0px;
-    position:absolute;
-}
-
-.energy-components {
-    top: 35px;
-    position:absolute;
-}
-
-.food-components {
-    top: 70px;
-    position:absolute;
-}
-
-#level-container {
-    font-family: 'Press Start 2P', cursive;
-    color: white;
-    position:absolute;
-}
-
-#game-screen {
-    display: flex;
-    justify-content: center;
-    padding: 30px 30px 0 30px;
-}
-
-.gamingBg {
-    width: 100%;
-}
-
-.spans {
-    font-size: 12px;
-    margin-top: 5px;
-}
-
-.gaming {
-    font-family: 'Alata', sans-serif;
-    color: #fff;
-    font-size: 16px;
-    font-style: italic;
-}
-
-.r, .o, .y, .g, .b, .i, .v {
-    font-family: 'Gochi Hand', cursive;
-}
-
-.r {color: #ff3823; margin-left: 8px; font-size: 20px; letter-spacing: -4px;}
-.o {color: #ff8351; font-size: 20px; letter-spacing: -4px;}
-.y {color: #fef67f; font-size: 20px; letter-spacing: -4px;}
-.g {color: #72bb53; font-size: 20px; letter-spacing: -4px;}
-.b {color: #3d8af7; font-size: 20px; letter-spacing: -4px;}
-.i {color: #0844a4; font-size: 20px; letter-spacing: -4px;}
-.v {color: #6334e3; font-size: 20px; letter-spacing: -4px;}
-
-#lifeButtons, #movementButtons {
-    display: flex;
-    position: fixed;
-    justify-content: center;
-    bottom: 0;
-    width: 300px;
-    height: 300px;
-}
-
-#lifeButtons {
-    left: 5%;
-}
-
-#movementButtons {
-    right: 5%;
-}
-
-.lifeBtns {
-    border-radius: 50%;
-    margin: 10px 10px;
-}
-
-.arrowBtns, .lifeBtns {
-    background-color: transparent;
-    border-color: transparent;
-}
-
-.lifeImg {
-    width: 110px;
-}
-
-.arrowkey {
-    width: 130px;
-}
-
-#game-screen {
-    display: flex;
-    justify-content: center;
-}
-
-.embeak {
-    position: absolute;
-    bottom: 30px;
-    width: 100px;
-}
-
-.droop {
-    position: absolute;
-    bottom: 30px;
-    width: 100px;
-}
-
-.geopup {
-    position: absolute;
-    bottom: 50px;
-    width: 100px;
-}
-
-.rareCandy {
-    position: absolute;
-    width: 5%;
-    bottom: 60px;
-}
-
-/*===========================*/
-/*         Result Page       */
-/*===========================*/
-#result-page {
-    display: inline-block;
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    background: radial-gradient(circle, #aaaaaa, #777777, #52575d);
-    z-index: -3;
-    text-align: center;
-}
-
-.result {
-    font-family: 'Press Start 2P', cursive;
-    color: red;
-    margin-top: 10rem;
-    font-size: 5rem;
-}
-
-.result-header {
-    font-family: 'Press Start 2P', cursive;
-    font-size: 2rem;
-    margin: 7rem 0 5rem;
-    color: white;
-}
-
-.refresh-btn {
-    font-family: 'Press Start 2P', cursive;
-    padding: 10px 10px;
-    animation: pulsate 2s ease-out;
-    animation-iteration-count: infinite;
-    animation: pulsate 2s ease-out;
-    animation-iteration-count: infinite;
-}
-
-.refresh-btn:hover {
-    background-color: #66CD00;
-    color: white;
-    animation: none;
-}
-
-/*===========================*/
-/*          Keyframes        */
-/*===========================*/
-@keyframes clouds {
-    from {
-        right: 0%;
-    }
-    to {
-        right: 130%;
-    }
-}
-
-
-@keyframes pulsate {
-    /* This effect will apply to start game message */
-    0% {
-        opacity: 0.3;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0.3;
-    }
-}
+ 
+ /*===========================*/
+ /*      Fonts To Be Used     */
+ /*===========================*/
+ /* font-family: 'Alata', sans-serif;
+ font-family: 'Gochi Hand', cursive;
+ font-family: 'Press Start 2P', cursive;
+ 
+ /*===========================*/
+ /*       Preload Styles      */
+ /*===========================*/
+ 
+ #preload {
+     position: fixed;
+     top: 0;
+     width: 100%;
+     height: 100vh;
+     background: #fff;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     transition: opacity 0.5s ease;
+     z-index: 2;
+ }
+ 
+ .apoca-bg {
+     width: 100%;
+     height: 100%;
+ }
+ 
+ .apoca-cloud1, .apoca-cloud2, .apoca-cloud3 {
+     position: absolute;
+     right: 0%;
+     height: 80px;
+     width: 300px;
+     opacity: .3;
+ }
+ 
+ .apoca-cloud1 {
+     top: 15%;
+     transform: translate(100%, -15%);
+     animation: clouds 3s cubic-bezier(.7,1,1,1) infinite;
+ }
+ .apoca-cloud2 {
+     top: 20%;
+     transform: translate(100%, -20%);
+     animation: clouds 3s cubic-bezier(1,1,1,1) infinite 3s;
+ }
+ .apoca-cloud3 {
+     top: 10%;
+     transform: translate(100%, -10%);
+     animation: clouds 3s cubic-bezier(.9,1,1,1) infinite 1.5s;
+ }
+ 
+ #intro-text1, #intro-text2, #intro-text3 {
+     font-family: 'Press Start 2P', cursive;
+     color: black;
+     display: flex;
+     position: absolute;
+ }
+ 
+ #intro-text1 {
+     top: 12%;
+     left: 6%;
+ }
+ 
+ #intro-text2 {
+     top: 18%;
+     left: 32%;
+ }
+ 
+ #intro-text3 {
+     top: 28%;
+     left: 65%;
+ }
+ 
+ /*===========================*/
+ /*    Landing Page Styles    */
+ /*===========================*/
+ #landingpage {
+     top: 0;
+     width: 100%;
+     height: 100vh;
+     background: radial-gradient(circle, #aaaaaa, #777777, #52575d);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     transition: opacity 0.5s ease;
+     position: fixed;
+     z-index: 0;
+ }
+ 
+ .start-screen {
+     width: 50%;
+     text-align: center;
+ }
+ 
+ .pokegotchi-header {
+     width: 100%;
+ }
+ 
+ .pokegotchi-mc {
+     width: 10%;
+     margin: 40px 0 20px;
+ }
+ 
+ .apocalypse-version, .start-game-message, .project-rights {
+     text-align: center;
+     font-family: 'Press Start 2P', cursive
+ }
+ 
+ .apocalypse-version {
+     margin-top: 40px;
+     font-size: 1.2rem;
+     letter-spacing: 1.6px;
+ }
+ 
+ .start-game-message {
+     font-size: 12px;
+     margin-bottom: 20px;
+     color: white;
+     animation: pulsate 2s ease-out;
+     animation-iteration-count: infinite;
+ }
+ 
+ .project-rights {
+     font-size: .8rem;
+ }
+ 
+ /*===========================*/
+ /*      Game Init Styles     */
+ /*===========================*/
+ #game-initiation {
+     top: 0;
+     width: 100%;
+     height: 100vh;
+     background: whitesmoke;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     transition: opacity 0.5s ease;
+     position: fixed;
+     z-index: -1;
+ }
+ 
+ .init-container {
+     width: 940px;
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+ }
+ 
+ .init-dialogue {
+     position: absolute;
+     bottom: 5%;
+     height: 150px;
+     width: 900px;
+ }
+ 
+ .game-init-msg {
+     font-family: 'Press Start 2P', cursive;
+     color: black;
+     display: flex;
+     position: absolute; 
+     width: inherit;
+     padding: 0px 50px;
+     text-align: center;
+     line-height: 2;
+ }  
+ 
+ #game-init-msg1, 
+ #game-init-msg3 {
+     bottom: 10%;
+ }
+ 
+ #game-init-msg2 {
+     bottom: 8%;
+ }
+ 
+ #game-init-msg4 {
+     bottom: 7%;
+ }
+ 
+ #input1, #input2, #input3 {
+     visibility: hidden;
+     position: absolute;
+     width: 300px;
+     height: 30px;
+     text-align: center;
+     top: 20%;
+     font-family: 'Press Start 2P', cursive;
+ }
+ 
+ #btnInput1, #btnInput5 {
+     visibility: hidden;
+     position: absolute;
+     padding: 6.5px 8px;
+     top: 28%;
+     font-family: 'Press Start 2P', cursive;
+ }
+ 
+ .hoverboys:hover {
+     background-color: #BF1736;
+     color: #fff;
+ }
+ 
+ 
+ #btnInput2, #btnInput3, #btnInput4 {
+     visibility: hidden;
+     position: absolute;
+     border-width: 0;
+     border-color: transparent;
+     background-color: transparent;
+     width: 200px;
+     height: 200px;
+     top: 35%;
+ }
+ 
+ .droop-standard {
+     width: inherit;
+ }
+ 
+ #btnInput2 {
+     left: 30%;
+ }
+ 
+ #btnInput3 {
+     left: 45%;
+ }
+ 
+ #btnInput4 {
+     left: 60%;
+ }
+ 
+ 
+ /*===========================*/
+ /*    Game Console Styles    */
+ /*===========================*/
+ #game {
+     top: 0;
+     background-color: black;
+     width: 100%;
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     transition: opacity 0.5s ease;
+     position: fixed;
+     z-index: -2;
+ }
+ 
+ .gamingConsole {
+     background: linear-gradient(0deg, #464646, #501fc1);
+     width: 700px;
+     height: 560px;
+     position: fixed;
+     border-radius: 20px;
+     bottom: -5%;
+     border-style: ridge;
+     border-color: #40007F;
+     display: flex;
+     justify-content: center;
+ 
+ }
+ 
+ .black-screen {
+     position: fixed;
+     width: 570px;
+     bottom: 10%;
+     background-color: #000;
+     border-radius: 20px;
+     display: flex;
+ }
+ 
+ .innerGamingConsole {
+     position: fixed;
+     width: inherit;
+     background: black;
+     display: flex;
+     flex-direction: column;
+     padding-bottom: 15px;
+     border-radius: 30px;
+     bottom: 12%;
+     text-align: center;
+ }
+ 
+ #game-rules-container {
+     position: absolute;
+     top: 5%;
+     font-size: 10px;
+     text-align: center;
+     width: 500px;
+ }
+ 
+ #game-rules-btn {
+     font-family: 'Press Start 2P', cursive;
+     padding: 3px 3px;
+     visibility: hidden;
+     opacity: .5;
+     margin: 10px;
+     background: transparent;
+     color: white;
+ }
+ 
+ #rules-text {
+     color: white;
+     font-family: 'Press Start 2P', cursive;
+ }
+ 
+ .start-btn {
+     font-family: 'Press Start 2P', cursive;
+     padding: 3px 3px;
+     position: absolute;
+     left: 45%;
+     top: 50%;
+     animation: pulsate 2s ease-out;
+     animation-iteration-count: infinite;
+ }
+ 
+ .start-btn:hover {
+     background-color: red;
+     color: white;
+     padding: 4px 4px;
+     animation: none;
+ }
+ 
+ .criticalComponents {
+     position:absolute;
+     top: 100px;
+     left: 100px;
+ }
+ 
+ .happiness-components {
+     top: 0px;
+     position:absolute;
+ }
+ 
+ .energy-components {
+     top: 35px;
+     position:absolute;
+ }
+ 
+ .food-components {
+     top: 70px;
+     position:absolute;
+ }
+ 
+ #level-container {
+     font-family: 'Press Start 2P', cursive;
+     color: white;
+     position:absolute;
+ }
+ 
+ #game-screen {
+     display: flex;
+     justify-content: center;
+     padding: 30px 30px 0 30px;
+ }
+ 
+ .gamingBg {
+     width: 100%;
+ }
+ 
+ .spans {
+     font-size: 12px;
+     margin-top: 5px;
+ }
+ 
+ .gaming {
+     font-family: 'Alata', sans-serif;
+     color: #fff;
+     font-size: 16px;
+     font-style: italic;
+ }
+ 
+ .r, .o, .y, .g, .b, .i, .v {
+     font-family: 'Gochi Hand', cursive;
+ }
+ 
+ .r {color: #ff3823; margin-left: 8px; font-size: 20px; letter-spacing: -4px;}
+ .o {color: #ff8351; font-size: 20px; letter-spacing: -4px;}
+ .y {color: #fef67f; font-size: 20px; letter-spacing: -4px;}
+ .g {color: #72bb53; font-size: 20px; letter-spacing: -4px;}
+ .b {color: #3d8af7; font-size: 20px; letter-spacing: -4px;}
+ .i {color: #0844a4; font-size: 20px; letter-spacing: -4px;}
+ .v {color: #6334e3; font-size: 20px; letter-spacing: -4px;}
+ 
+ #lifeButtons, #movementButtons {
+     display: flex;
+     position: fixed;
+     justify-content: center;
+     bottom: 0;
+     width: 300px;
+     height: 300px;
+ }
+ 
+ #lifeButtons {
+     left: 5%;
+ }
+ 
+ #movementButtons {
+     right: 5%;
+ }
+ 
+ .lifeBtns {
+     border-radius: 50%;
+     margin: 10px 10px;
+ }
+ 
+ .arrowBtns, .lifeBtns {
+     background-color: transparent;
+     border-color: transparent;
+ }
+ 
+ .lifeImg {
+     width: 110px;
+ }
+ 
+ .arrowkey {
+     width: 130px;
+ }
+ 
+ #game-screen {
+     display: flex;
+     justify-content: center;
+ }
+ 
+ .embeak {
+     position: absolute;
+     bottom: 30px;
+     width: 100px;
+ }
+ 
+ .droop {
+     position: absolute;
+     bottom: 30px;
+     width: 100px;
+ }
+ 
+ .geopup {
+     position: absolute;
+     bottom: 50px;
+     width: 100px;
+ }
+ 
+ .rareCandy {
+     position: absolute;
+     width: 5%;
+     bottom: 60px;
+ }
+ 
+ 
+ 
+ /*===========================*/
+ /*         Result Page       */
+ /*===========================*/
+ #result-page {
+     display: inline-block;
+     width: 100vw;
+     height: 100vh;
+     position: fixed;
+     background: radial-gradient(circle, #aaaaaa, #777777, #52575d);
+     z-index: -3;
+     text-align: center;
+ }
+ 
+ .result {
+     font-family: 'Press Start 2P', cursive;
+     color: red;
+     margin-top: 10rem;
+     font-size: 5rem;
+ }
+ 
+ .result-header {
+     font-family: 'Press Start 2P', cursive;
+     font-size: 2rem;
+     margin: 7rem 0 5rem;
+     color: white;
+ }
+ 
+ .refresh-btn {
+     font-family: 'Press Start 2P', cursive;
+     padding: 10px 10px;
+     animation: pulsate 2s ease-out;
+     animation-iteration-count: infinite;
+     animation: pulsate 2s ease-out;
+     animation-iteration-count: infinite;
+ }
+ 
+ .refresh-btn:hover {
+     background-color: #66CD00;
+     color: white;
+     animation: none;
+ }
+ 
+ 
+ 
+ /*===========================*/
+ /*          Keyframes        */
+ /*===========================*/
+ @keyframes clouds {
+     from {
+         right: 0%;
+     }
+     to {
+         right: 130%;
+     }
+ }
+ 
+ 
+ @keyframes pulsate {
+     /* This effect will apply to start game message */
+     0% {
+         opacity: 0.3;
+     }
+     50% {
+         opacity: 1;
+     }
+     100% {
+         opacity: 0.3;
+     }
+ }
+ 

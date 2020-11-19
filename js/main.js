@@ -291,7 +291,7 @@ function appendChosenSpriteInGame () {
         removeStartButton();
         renderCriticalComponents();
         timerSetup();
-        setInterval(generateRareCandy, 5000);
+        setInterval(generateRareCandy, 1000);
     });
 }
 
@@ -335,7 +335,7 @@ function renderCriticalComponent (num, elementId, src) {
     }
 }
 
-// // In-game Timer
+// In-game Timer
 let time = 0
 let points = 0;
 const timerSetup = () => {
@@ -371,6 +371,7 @@ function changingSpriteExpression (spriteclass) {
         let src = "./images/" + spriteclass.toLowerCase() + "-evolution1.png";
         spriteElement.src = src;
         spriteElement.style.bottom = 50 + "px";
+        fadeInSpriteImage(spriteElement); 
     }
     if (player.sprite.firstEvolutionIsDead()) {
         let src = "./images/" + spriteclass.toLowerCase() + "-evolution1-dead.png";
@@ -388,6 +389,10 @@ function changingSpriteExpression (spriteclass) {
         spriteElement.style.bottom = 50 + "px";
     }
 };
+
+function fadeInSpriteImage () {
+    $("#movingSprite").fadeIn('slow');
+}
 
 // Rare Candy Pick-up Functionality
 // The idea is to drop candies in random places along the game screen div
@@ -428,12 +433,7 @@ function checkCandyOverlap (position) {
         }
 }
 
-// Results Page - Refresh Button Function
-$(document).ready(function() {
-    $('#refresh-page').on('click', () => {
-        window.location.reload(true); 
-    });
-});
+
 
 
 // Rendering introduction dialogue
